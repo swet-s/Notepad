@@ -15,7 +15,7 @@ const Text = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get("https://latext.onrender.com/text");
+                const response = await axios.get("https://intractle.onrender.com/text");
                 setInputText(response.data.content);
             } catch (error) {
                 console.error("Error fetching content:", error);
@@ -33,7 +33,7 @@ const Text = () => {
 
     const saveText = async () => {
         try {
-            const response = await axios.put("https://latext.onrender.com/text", {
+            const response = await axios.put("https://intractle.onrender.com/text", {
                 content: inputText,
             });
 
